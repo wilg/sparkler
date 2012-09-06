@@ -4,8 +4,8 @@ require File.expand_path('../lib/sparkler/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Wil Gieseler"]
   gem.email         = ["supapuerco@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = "Automatically zip, upload, and generate release notes for your Sparkle-enabled apps."
+  gem.summary       = "Automatically zip, upload, and generate release notes for your Sparkle-enabled apps."
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
@@ -15,8 +15,14 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Sparkler::VERSION
 
-  gem.add_dependency('colorize')
-  gem.add_dependency('thor')
-  gem.add_dependency('grit')
+  gem.add_dependency 'colorize'
+  gem.add_dependency 'thor'
+  gem.add_dependency 'grit'
+  gem.add_dependency 'CFPropertyList'
+  gem.add_dependency 'aws-sdk'
+  # gem.add_dependency 'xcodeproj'
+
+  gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'debugger'
 
 end

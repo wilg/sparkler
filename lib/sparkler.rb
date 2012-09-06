@@ -1,5 +1,4 @@
 require "sparkler/version"
-
-module Sparkler
-  # Your code goes here...
-end
+require "sparkler/errors"
+require "sparkler/app"
+require "sparkler/release"
